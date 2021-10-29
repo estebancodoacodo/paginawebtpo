@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="../imagenestpo1/favicon-16x16.png">
+    <link rel="icon" href="../imagenestpo1/favicon-32x32.png">
+    <title>Tu Lapicera</title>
+    <link rel="stylesheet" href="csscontacto.css">
+
+</head>
+<body class="body">
+    <header class="header">
+        Tu Lapicera
+        <p>- Elige para regalar o regalarte -</p>
+    </header>  
+    <nav class="navbar">
+        <a href="paginaquintana.html">Home</a>          
+        <a href="quienessomos.html">Quienes Somos</a>
+        <a href="productos.html">Productos</a>
+        <a href="customise.html">Customise</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div id="cuerpo">
+        <div id="fotoytexto">
+            <img id="call" src="../imagenestpo1/callCenter.jpg" alt="imagencontacto" height="350rem" width="400rem">
+        </div>
+        <div id="contact">
+            <p>Contactenos</p>
+            <p class="info">Para mas informacion puede contactarse con nuestro centro de atención al cliente</p>
+            <br>
+            <p class="info"> Tel:0021523158</p>
+        </div>
+    </div>
+
+    <div class="mapayform">
+        
+        <div id="formconta">
+            <form action="" name="formulario" method="get">Si lo desea puede completar el siguiente formulario y responderemos a la brevedad
+                <br>
+                <br>
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+                        <p><label for="">Nombre: <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre de pila"></label></p>
+                        <p><label for="">Apellido: <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellidos"></label></p>
+                        <p><label for="">Correo: <input type="text" name="mail" id="mail" placeholder="e-mail"></label></p>
+                        <p><textarea name="consultas" id="consultas" cols="60" rows="15" placeholder="Escribe aqui tu consulta..."></textarea></p>
+                        <input type="submit" id="boto" name="btn" value="Enviar">
+                </fieldset>
+            </form>
+        </div>
+    <br>
+    <br>
+
+        <div class="mapa">
+            <p>O puede visitarnos en nuestro local, ubicado en Retiro:</p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5523.571684113746!2d-58.385865806353!3d-34.59568005596266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab595993163%3A0xb5d975299fbe9750!2sPlaza%20General%20San%20Mart%C3%ADn!5e0!3m2!1ses!2sar!4v1635400246013!5m2!1ses!2sar" style="border: 1px;;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div id="cajapadre">
+            <div id="legales"> 
+                <p>©<i>Tu Lapicera </i></p>
+                <p>Todos los derechos reservados</p>
+            </div>
+        </div>
+        <br>
+        <div id="redessociales">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.instagram.com/?hl=es" class="ig" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="https://es-la.facebook.com/" class="fb" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="https://twitter.com/?lang=es" class="tw" target="_blank"><i class="bx bxl-twitter"></i></a>
+        </div>
+        <br>
+        <div id="newsletter">
+            <p>Subscribase a nuestro newsletter</p>
+            <form method="get" target="_self" name="newsletter">
+                <p><label> Nombre: <input type="text" name="name"></label></p>
+                <p><label>Apellido: <input type="text" name="surname"></label></p>
+                <p><label>E-mail:   <input type="text" name="eemail"></label></p>
+                <p><input type="checkbox" name="TyC" id="terminos">
+                    <a href="Términos y Condiciones.pdf" class="tyc" target="_blank">Acepto términos y condiciones</a>
+                </p>
+               <p><input type="submit" id="boton" value="enviar"></p>
+            </form>
+        </div>
+    </footer>
+    
+    <script src="validacionformulario.js"></script>
+
+</body>
+</html>

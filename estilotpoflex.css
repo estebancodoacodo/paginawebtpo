@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    font-family: 'Italianno', cursive;
+    font-size: 400%;
+    font-weight: bold;
+    color: navy;
+    padding: 35px;
+    text-align: center;
+    background-color: rgb(221, 228, 181);
+}
+header p{
+    font-size: 20%;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar{
+    padding: 15px; /*se lo podria haber puesto al enlace*/
+    text-align: center;  
+    background-color: rgb(235, 240, 207); 
+    border-style: double none double;
+    border-color: orangered;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+}
+nav a:link{color: navy;}
+nav a:hover{color: rgb(15, 103, 218);}
+nav a:visited{color: navy;}
+nav a:active{color: rgb(95, 128, 31);}
+#cuerpo{
+    text-align: center;
+    height: 1500px;
+    display: flex;
+    flex-wrap: wrap; /*asegura que no se desborde, se quede dentro del contenedor, si se pasa baja una linea*/
+}
+#carousel{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 260px;
+    background-image: url(../imagenestpo1/img1.png);
+
+    animation-name: cambiarfondo;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes cambiarfondo {
+    0%{background-image: url(../imagenestpo1/img1.png);}
+    25%{background-image: url(../imagenestpo1/img2.png);}
+    50%{background-image: url(../imagenestpo1/img3.jpg);}
+    75%{background-image: url(../imagenestpo1/img4.png);}
+}
+.main{
+    text-align: center;
+    flex: 85%;
+    background-color: rgb(221, 228, 181);
+    padding: 20px;
+}
+.sidebar{
+    flex: 15%;
+    background-color:rgb(124, 109, 109);
+    padding: 20px;
+    text-align: center;
+}
+footer{
+    padding: 20px;
+    height: 200px;
+    text-align: center;
+    background-color: rgb(51, 70, 105);
+    color: whitesmoke;
+    font-size: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+a:link{color: whitesmoke;
+    text-decoration: none;
+}
+a:hover{color: rgb(251, 235, 0);}
+a:visited{color: rgb(101, 94, 194);}
+a:active{color: cadetblue;}
+
+
+
+@media (max-width:600px) {
+    nav,#cuerpo,footer,aside{
+        flex-direction:column;
+    }
+    footer{
+        height: auto;
+    }    
+}
+@media (min-width:600px) {
+    #cuerpo{
+        flex-direction: column;
+    } 
+    footer{
+        height: auto;
+    }  
+} 
+@media (min-width:992px) {
+    nav,#cuerpo,sidebar{
+        flex-direction:row;
+    }    
+}

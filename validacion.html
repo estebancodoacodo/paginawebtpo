@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones con JS</title>
+    <style>
+        *{font-family: Verdana;}
+    </style>
+</head>
+
+<body>
+        <form method="get" target="_self" name="newsletter">
+        <p><label> Nombre: <input type="text" name="name"></label></p>
+        <p><label>Apellido: <input type="text" name="surname"></label></p>
+        <p><label>E-mail:   <input type="text" name="eemail"></label></p>
+        <p><input type="checkbox" name="TyC" id="terminos">
+            <a href="Términos y Condiciones.pdf" class="tyc" target="_blank">Acepto términos y condiciones</a>
+        </p>
+       <p><input type="submit" id="boton" value="enviar"></p>
+    <script>
+        (function newsl(){
+            var formula = document.getElementsByName('newsletter')[0],
+                elements = newsletter.elements,
+                button = document.getElementById('boton');
+
+            var validarName = function(g){
+                if (newsletter.name.value == 0){
+                    alert("Debe ingresar un nombre");
+                    e.preventDefault();
+                }
+            };
+
+            var validarSurname = function(g){
+                if (newsletter.surname.value == 0){
+                    alert("Debe ingresar un apellido");
+                    e.preventDefault();
+                }
+            };
+
+            var validarEEMail = function(g){
+                if (newsletter.eemail.value == 0){
+                    alert("Debe ingresar una direccion de correo electronico");
+                    e.preventDefault();
+                }
+            };
+
+            var validarCCheckbox = function(g){
+                if (newsletter.terminos.checked == false){
+                    alert("Acepta los términos y condiciones");
+                    e.preventDefault();
+                }
+            };
+
+            var valida = function(g){
+                validarName(g);
+                validarSurname(g);
+                validarEEMail(g);
+                validarCCheckbox(g);
+            };
+            formula.addEventListener("submit", valida);
+        }())
+    </script>
+</body>
+</html>

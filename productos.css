@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    font-family: 'Italianno', cursive;
+    font-size: 500%;
+    font-weight: bold;
+    color: navy;
+    padding: 35px;
+    text-align: center;
+    background-color: rgb(221, 228, 181);
+}
+header p{
+    font-size: 25%;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar{
+    padding: 15px; /*se lo podria haber puesto al enlace*/
+    text-align: center;  
+    background-color: rgb(235, 240, 207); 
+    border-style: double none double;
+    border-color: orangered;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+}
+nav a:link{color: navy;}
+nav a:hover{color: rgb(15, 103, 218);}
+nav a:visited{color: navy;}
+nav a:active{color: rgb(95, 128, 31);}
+
+#cuerpo{
+    text-align: center;
+    height: 1500px;
+    display: flex;
+    flex-wrap: wrap; /*asegura que no se desborde, se quede dentro del contenedor, si se pasa baja una linea*/ /*agregado ahor*/
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(221, 228, 181);
+    padding: 1%;
+
+}
+
+footer{
+    padding: 20px;
+    height: auto;
+    text-align: center;
+    background-color: rgb(51, 70, 105);
+    color: whitesmoke;
+    font-size: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+a:link{color: whitesmoke;
+    text-decoration: none;
+}
+a:hover{color: rgb(251, 235, 0);}
+a:visited{color: rgb(179, 241, 155);}
+a:active{color: cadetblue;}
+
+
+@media (max-width:600px) {
+    footer,nav,#cuerpo,#cuerpomain{
+        flex-direction:column;
+    }
+}
+
+@media (max-width:992px) {
+    #cuerpo{
+        flex-direction: column;
+    }
+} 
+
+@media (min-width:992px) {
+    nav,#cuerpo,sidebar{
+        flex-direction:row;
+    }    
+}
